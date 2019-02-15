@@ -1,0 +1,15 @@
+<div class="teach-index h100" ng-controller="TeachIndexCtrl">
+  <div class="title"><i class="iconfont">&#xeeb6;</i>黑暗骑士的教学网站<i class="iconfont">&#xeeb6;</i></div>
+  <div class="div-main">
+    <div class="icons">
+      <div ng-repeat="d in list" class="icon" ng-click="toSub(d);">
+        <div class="text-center">
+          <span class="iconfont" ng-bind-html="d.iconfont"></span>
+        </div>
+        <div class="text-center">
+          <span ng-bind-html="d.typeName" ng-title="d.info"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

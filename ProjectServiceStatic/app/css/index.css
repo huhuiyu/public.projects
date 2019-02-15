@@ -1,0 +1,98 @@
+/*index页面的css*/
+.index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.index .content .iconfont {
+  font-size: 10rem;
+  animation: index-iconfont 3s infinite;
+}
+
+@keyframes index-iconfont {
+  0% {
+    text-shadow: 0 0 0rem #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 5rem #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 0rem #ffffff;
+  }
+}
+
+.index .bg01,
+.index .bg02,
+.index .bg03 {
+  background-size: cover;
+  transition: all 1s;
+  position: relative;
+}
+
+.index .movein {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 100%;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: left 0.5s;
+  font-size: 4rem;
+}
+
+.index .movein span:hover {
+  cursor: pointer;
+}
+
+.index .bg01:hover .movein,
+.index .bg02:hover .movein,
+.index .bg03:hover .movein {
+  left: 0px;
+}
+
+.index .bg01 {
+  background-image: url('../images/bg0001.png');
+}
+
+.index .bg02 {
+  background-image: url('../images/bg0004.png');
+}
+
+.index .bg03 {
+  background-image: url('../images/bg0003.png');
+}
+
+.index .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 手机样式 */
+.index .mobile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: 2rem;
+  background-image: url('../images/bg0006.png');
+  background-size: cover;
+}
+.index .mobile-container .item {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.index .mobile-container .item .iconfont {
+  font-size: 10rem;
+  animation: index-iconfont 3s infinite;
+}

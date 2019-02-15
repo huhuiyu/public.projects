@@ -1,0 +1,37 @@
+{
+  "common": {
+    "nodemodules": "node_modules/"
+  },
+  "appblank": {
+    "src": "app-blank/",
+    "js": "app-blank/js/",
+    "css": "app-blank/css/",
+    "html": "app-blank/html/",
+    "libs": "app-blank/libs/",
+    "templates": "app-blank/html/templates/",
+    "images": "app-blank/images/",
+    "dist": "dist/app-blank/",
+    "distlibs": "dist/app-blank/libs/",
+    "distjs": "dist/app-blank/js/",
+    "distcss": "dist/app-blank/css/",
+    "disttemplates": "dist/app-blank/templates/",
+    "distimages": "dist/app-blank/images/",
+    "distfonts": "dist/app-blank/fonts/"
+  },
+  "app": {
+    "src": "app/",
+    "js": "app/js/",
+    "css": "app/css/",
+    "html": "app/html/",
+    "libs": "app/libs/",
+    "templates": "app/html/templates/",
+    "images": "app/images/",
+    "dist": "dist/app/",
+    "distlibs": "dist/app/libs/",
+    "distjs": "dist/app/js/",
+    "distcss": "dist/app/css/",
+    "disttemplates": "dist/app/templates/",
+    "distimages": "dist/app/images/",
+    "distfonts": "dist/app/fonts/"
+  }
+}

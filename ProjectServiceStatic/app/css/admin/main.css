@@ -1,0 +1,10 @@
+.admin-main .div-inc {
+  position: relative;
+  padding: 1rem;
+}
+
+.admin-main .inc-ani.ng-enter {
+  position: absolute;
+  width: 100%;
+  animation: inc-change-enter 0.5s;
+}

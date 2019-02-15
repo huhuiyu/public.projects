@@ -1,0 +1,80 @@
+/*teach-index页面的css*/
+.teach-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/study.jpg');
+  background-size: cover;
+}
+
+.teach-index .title {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #333333;
+  font-size: 3rem;
+  animation: teach-index-title 2s infinite;
+}
+
+.teach-index .div-main {
+  margin-top: 3rem;
+}
+
+.teach-index .icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.teach-index .icons .iconfont {
+  font-size: 8rem;
+  color: #ff0000;
+}
+
+.teach-index .icon {
+  cursor: pointer;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 14rem;
+}
+
+.teach-index .icon:hover {
+  color: #0000ff;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.teach-index .icon:hover .iconfont {
+  animation: teach-index-icon 2s infinite;
+}
+
+@keyframes teach-index-icon {
+  0% {
+    text-shadow: 0 0 0 #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 20rem #ffffff;
+  }
+}
+
+@keyframes teach-index-title {
+  0% {
+    text-shadow: 0 0 1rem #ffffff;
+  }
+  25% {
+    text-shadow: 0.2rem 0 1rem #ffffff;
+  }
+  50% {
+    text-shadow: 0 0.2rem 1rem #ffffff;
+  }
+  75% {
+    text-shadow: -0.2rem 0 1rem #ffffff;
+  }
+  100% {
+    text-shadow: 0 -0.2rem 1rem #ffffff;
+  }
+}

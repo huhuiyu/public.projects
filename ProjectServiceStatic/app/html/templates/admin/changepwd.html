@@ -1,0 +1,21 @@
+<div ng-controller="AdminChangePwdCtrl">
+  <div class="text-center">修改密码</div>
+  <div class="form-group group-pd05">
+    <div class="input-group">
+      <span class="input-group-addon">旧密码</span>
+      <input type="password" class="form-control" ng-model="model.oldPwd">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">新密码</span>
+      <input type="password" class="form-control" ng-model="model.tbAdmin.password">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">确认密码</span>
+      <input type="password" class="form-control" ng-model="model.pwd2">
+    </div>
+    <div class="text-center">
+      <span class="btn btn-danger" ng-click="save();">保存</span>
+      <span class="btn btn-danger" ng-click="closeMe();">关闭</span>
+    </div>
+  </div>
+</div>

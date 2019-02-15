@@ -1,0 +1,20 @@
+<div ng-controller="AdminMainCtrl" class="admin-main">
+  <div class="text-right bg-danger pd05">
+    <span><i class="iconfont">&#xe611;</i>欢迎：</span><span ng-bind="userinfo.username"></span>
+    <span class="btn btn-info" ng-click="changePwd();">修改密码</span>
+    <span class="btn btn-primary" ng-click="logout();">安全退出<i class="iconfont">&#xe6c9;</i></span>
+  </div>
+
+  <div role="tabpanel">
+    <ul class="nav nav-tabs" role="tablist">
+      <li ng-repeat="m in menus" role="presentation" ng-class="{true:'active'}[$index==menuid]">
+        <a href="javascript:void(0);" ng-click="changePage($index);"><span ng-bind="m.text"></span></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="div-inc">
+    <div ng-include="menu" class="inc-ani"></div>
+  </div>
+
+</div>

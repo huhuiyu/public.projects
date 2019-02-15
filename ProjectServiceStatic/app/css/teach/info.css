@@ -1,0 +1,130 @@
+/*teach-info页面的css*/
+.teach-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/study.jpg');
+  background-size: cover;
+}
+
+.teach-info .title {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #333333;
+  font-size: 3rem;
+  animation: teach-info-title 2s infinite;
+}
+
+.teach-info .back {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  font-size: 2rem;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.teach-info .back:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+
+.teach-info .div-main {
+  margin-top: 3rem;
+}
+
+.teach-info .items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.teach-info .item {
+  max-width: 8em;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.teach-info .item:hover {
+  box-shadow: 0 0 4rem #ffffff;
+  animation: teach-info-item 0.5s;
+}
+
+/* .teach-info .item div {
+  animation: teach-info-item-content 3s infinite;
+} */
+
+@keyframes teach-info-item-content {
+  0% {
+    text-shadow: 0 0 0rem #ff0000;
+  }
+  75% {
+    text-shadow: 0 0 10rem #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 1rem #ff0000;
+  }
+}
+
+@keyframes teach-info-item {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes teach-info-title {
+  0% {
+    text-shadow: 0 0 1rem #ffffff;
+  }
+  25% {
+    text-shadow: 0.2rem 0 1rem #ffffff;
+  }
+  50% {
+    text-shadow: 0 0.2rem 1rem #ffffff;
+  }
+  75% {
+    text-shadow: -0.2rem 0 1rem #ffffff;
+  }
+  100% {
+    text-shadow: 0 -0.2rem 1rem #ffffff;
+  }
+}

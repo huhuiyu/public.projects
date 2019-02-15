@@ -1,0 +1,46 @@
+<div class="index h100" ng-controller="IndexCtrl">
+  <div class="w50 h100" ng-if="!isMobile">
+    <div class="h50 bg01">
+      <div class="content h50">
+        <i class="iconfont">&#xe851;</i>
+      </div>
+      <div class="movein">
+        <span ng-click="toTopWeb();"><i class="iconfont">&#xe664;</i>进入我的网站</span>
+      </div>
+    </div>
+    <div class="h50 bg02">
+      <div class="content h50">
+        <i class="iconfont">&#xe613;</i>
+      </div>
+      <div class="movein">
+        <span ng-click="toCnWeb();"><i class="iconfont">&#xe664;</i>还是我的网站</span>
+      </div>
+    </div>
+  </div>
+  <div class="w50 h100 bg03" ng-if="!isMobile">
+    <div class="content h100">
+      <i class="iconfont">&#xe64a;</i>
+    </div>
+    <div class="movein">
+      <div>
+        <span ng-click="toStudy();"><i class="iconfont">&#xe664;</i>我要学习</span>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="isMobile" class="mobile-container h100 w100">
+    <div class="item text-center" ng-click="toTopWeb();">
+      <div><i class="iconfont">&#xe851;</i></div>
+      <div>进入我的网站</div>
+    </div>
+    <div class="item text-center" ng-click="toCnWeb();">
+      <div><i class="iconfont">&#xe613;</i></div>
+      <div>还是我的网站</div>
+    </div>
+    <div class="item text-center" ng-click="toStudy();">
+      <div><i class="iconfont">&#xe64a;</i></div>
+      <div>我要学习</div>
+    </div>
+
+  </div>
+</div>

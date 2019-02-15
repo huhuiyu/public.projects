@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.huhuiyu.projects.dao.TbTeachSubtypeDAO">
+  <!-- select st.tstid, st.ttid, st.subtypeName, st.iconfont, st.info, st.enable, st.lastupdate, t.typeName 'type.typeName',t.info 'type.info' from TbTeachSubtype st inner join TbTeachType t on st.ttid=t.ttid -->
+  <select id="queryAll" resultType="TbTeachSubtype" parameterType="TbTeachSubtype">
+    select tstid,ttid,subtypeName,iconfont,info,enable,lastupdate from TbTeachSubtype
+  </select>
+
+  <select id="queryAll_COUNT" resultType="int" parameterType="TbTeachSubtype">
+    select count(*) from TbTeachSubtype
+  </select>
+
+  <select id="queryByType" resultType="TbTeachSubtype" parameterType="TbTeachSubtype">
+    select tstid,ttid,subtypeName,iconfont,info,enable,lastupdate from TbTeachSubtype
+    where ttid=#{ttid} and enable='y'
+  </select>
+
+  <select id="queryBySubType" resultType="TbTeachSubtype" parameterType="TbTeachSubtype">
+    select tstid,ttid,subtypeName,iconfont,info,enable,lastupdate from TbTeachSubtype
+    where ttid=(select ttid from TbTeachSubtype where tstid=#{tstid} ) and enable='y'
+  </select>
+
+  <select id="queryByKey" parameterType="TbTeachSubtype" resultType="TbTeachSubtype">
+    select tstid,ttid,subtypeName,iconfont,info,enable,lastupdate from TbTeachSubtype
+    where tstid=#{tstid}
+  </select>
+
+  <insert id="add" parameterType="TbTeachSubtype">
+    insert into TbTeachSubtype(ttid,subtypeName,iconfont,info)
+    values(#{ttid},#{subtypeName},#{iconfont},#{info})
+  </insert>
+
+  <update id="update" parameterType="TbTeachSubtype">
+    update TbTeachSubtype set ttid=#{ttid},subtypeName=#{subtypeName},iconfont=#{iconfont},info=#{info},enable=#{enable}
+    where tstid=#{tstid}
+  </update>
+
+  <delete id="delete" parameterType="TbTeachSubtype">
+    delete from TbTeachSubtype
+    where tstid=#{tstid}
+  </delete>
+
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.huhuiyu.projects.dao.TbSysConfigDAO">
+
+  <select id="queryTeachInfoType" resultType="TbSysConfig">
+    select scid,typeCode,infoCode,infoValue,lastupdate from TbSysConfig
+    where typeCode='teach-info-type'
+  </select>
+
+  <select id="queryOssUrl" resultType="TbSysConfig">
+    select scid,typeCode,infoCode,infoValue,lastupdate from TbSysConfig
+    where typeCode='oss' and infoCode='oss-url'
+  </select>
+
+  <select id="queryAll" resultType="TbSysConfig">
+    select scid,typeCode,infoCode,infoValue,lastupdate from TbSysConfig
+  </select>
+
+  <select id="queryAll_COUNT" resultType="int">
+    select count(*) from TbSysConfig
+  </select>
+
+  <select id="queryByKey" parameterType="TbSysConfig" resultType="TbSysConfig">
+    select scid,typeCode,infoCode,infoValue,lastupdate from TbSysConfig
+    where scid=#{scid}
+  </select>
+
+  <insert id="add" parameterType="TbSysConfig">
+    insert into TbSysConfig(typeCode,infoCode,infoValue,lastupdate)
+    values(#{typeCode},#{infoCode},#{infoValue},#{lastupdate})
+  </insert>
+
+  <update id="update" parameterType="TbSysConfig">
+    update TbSysConfig set typeCode=#{typeCode},infoCode=#{infoCode},infoValue=#{infoValue},lastupdate=#{lastupdate}
+    where scid=#{scid}
+  </update>
+
+  <delete id="delete" parameterType="TbSysConfig">
+    delete from TbSysConfig
+    where scid=#{scid}
+  </delete>
+
+</mapper>

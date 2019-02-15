@@ -1,0 +1,20 @@
+<div ng-controller="AdminTeachTypeAddCtrl">
+  <div class="form-group group-pd05">
+    <div class="input-group">
+      <span class="input-group-addon">名称</span>
+      <input type="text" class="form-control" ng-model="model.tbTeachType.typeName">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">图标</span>
+      <input type="text" class="form-control" ng-model="model.tbTeachType.iconfont">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">描述</span>
+      <input type="text" class="form-control" ng-model="model.tbTeachType.info">
+    </div>
+    <div class="text-center">
+      <span class="btn btn-danger" ng-click="add();">保存</span>
+      <span class="btn btn-danger" ng-click="closeMe();">关闭</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.huhuiyu.projects.dao.TbAdminDAO">
+  <!-- 修改密码 -->
+  <update id="modifyPwd" parameterType="TbAdmin">
+    update TbAdmin set password=#{password}
+    where aid=#{aid}
+  </update>
+
+  <!-- 用户token信息 -->
+  <insert id="addTokenAdmin" parameterType="TbTokenInfo">
+    insert into TbTokenInfo(token,infoKey,info,lastupdate)
+    values(#{token},'admin',#{info},now())
+  </insert>
+
+  <select id="queryTokenAdmin" parameterType="TbTokenInfo" resultType="TbAdmin">
+    select aid,username,password,pwdsalt,enable,lastupdate from TbAdmin
+    where aid=
+    (
+    select info from TbTokenInfo
+    where
+    token=#{token} and infoKey='admin'
+    )
+  </select>
+
+  <delete id="deleteTokenAdmin" parameterType="TbTokenInfo">
+    delete from TbTokenInfo where token=#{token} and infoKey='admin'
+  </delete>
+
+  <!-- 业务逻辑 -->
+  <select id="queryByUsername" parameterType="TbAdmin" resultType="TbAdmin">
+    select aid,username,password,pwdsalt,enable,lastupdate from TbAdmin
+    where username=#{username}
+  </select>
+
+
+  <!-- 基础方法 -->
+  <select id="queryAll" resultType="TbAdmin">
+    select aid,username,password,pwdsalt,enable,lastupdate from TbAdmin
+  </select>
+
+  <select id="queryAll_COUNT" resultType="int">
+    select count(*) from TbAdmin
+  </select>
+
+  <select id="queryByKey" parameterType="TbAdmin" resultType="TbAdmin">
+    select aid,username,password,pwdsalt,enable,lastupdate from TbAdmin
+    where aid=#{aid}
+  </select>
+
+  <insert id="add" parameterType="TbAdmin">
+    insert into TbAdmin(username,password,pwdsalt,enable,lastupdate)
+    values(#{username},#{password},#{pwdsalt},#{enable},#{lastupdate})
+  </insert>
+
+  <update id="update" parameterType="TbAdmin">
+    update TbAdmin set username=#{username},password=#{password},pwdsalt=#{pwdsalt},enable=#{enable},lastupdate=#{lastupdate}
+    where aid=#{aid}
+  </update>
+
+  <delete id="delete" parameterType="TbAdmin">
+    delete from TbAdmin
+    where aid=#{aid}
+  </delete>
+
+</mapper>

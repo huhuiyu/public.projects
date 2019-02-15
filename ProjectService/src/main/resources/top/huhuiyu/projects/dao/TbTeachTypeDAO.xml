@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.huhuiyu.projects.dao.TbTeachTypeDAO">
+
+  <select id="queryAll" resultType="TbTeachType" parameterType="TbTeachType">
+    select ttid,typeName,iconfont,info,enable,lastupdate from TbTeachType
+    <trim prefix="where" prefixOverrides="and">
+      <!-- 通过enable过滤 -->
+      <if test="enable=='y'.toString() or enable=='n'.toString()">
+        and enable = #{enable}
+      </if>
+    </trim>
+  </select>
+
+  <select id="queryAll_COUNT" resultType="int" parameterType="TbTeachType">
+    select count(*) from TbTeachType
+    <trim prefix="where" prefixOverrides="and">
+      <!-- 通过enable过滤 -->
+      <if test="enable=='y'.toString() or enable=='n'.toString()">
+        and fileinfo like #{fileinfo}
+      </if>
+    </trim>
+  </select>
+
+  <select id="queryByKey" parameterType="TbTeachType" resultType="TbTeachType">
+    select ttid,typeName,iconfont,info,enable,lastupdate from TbTeachType
+    where ttid=#{ttid}
+  </select>
+
+  <select id="queryByTypeName" parameterType="TbTeachType" resultType="TbTeachType">
+    select ttid,typeName,iconfont,info,enable,lastupdate from TbTeachType
+    where typeName=#{typeName}
+  </select>
+
+  <insert id="add" parameterType="TbTeachType">
+    insert into TbTeachType(typeName,iconfont,info)
+    values(#{typeName},#{iconfont},#{info})
+  </insert>
+
+  <update id="update" parameterType="TbTeachType">
+    update TbTeachType set typeName=#{typeName},iconfont=#{iconfont},info=#{info},enable=#{enable}
+    where ttid=#{ttid}
+  </update>
+
+  <delete id="delete" parameterType="TbTeachType">
+    delete from TbTeachType
+    where ttid=#{ttid}
+  </delete>
+
+</mapper>

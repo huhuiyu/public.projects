@@ -1,0 +1,27 @@
+<div ng-controller="AdminTeachTypeModifyCtrl">
+  <div class="form-group group-pd05">
+    <div class="input-group">
+      <span class="input-group-addon">名称</span>
+      <input type="text" class="form-control" ng-model="model.tbTeachType.typeName">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">图标</span>
+      <input type="text" class="form-control" ng-model="model.tbTeachType.iconfont">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">描述</span>
+      <input type="text" class="form-control" ng-model="model.tbTeachType.info">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">状态</span>
+      <select class="form-control" ng-model="model.tbTeachType.enable">
+        <option value="y">启用</option>
+        <option value="n">停用</option>
+      </select>
+    </div>
+    <div class="text-center">
+      <span class="btn btn-danger" ng-click="save();">保存</span>
+      <span class="btn btn-danger" ng-click="closeMe();">关闭</span>
+    </div>
+  </div>
+</div>

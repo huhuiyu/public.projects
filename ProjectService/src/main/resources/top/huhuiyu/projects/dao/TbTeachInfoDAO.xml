@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.huhuiyu.projects.dao.TbTeachInfoDAO">
+
+  <select id="queryBySubtype" parameterType="TbTeachInfo" resultType="TbTeachInfo">
+    select ti.tiid,ti.tstid,ti.scid,ti.link,ti.info,ti.enable,ti.lastupdate,sc.infoValue 'linktype.infoValue',sc.infoCode 'linktype.infoCode'
+    from TbTeachInfo ti
+    inner join TbSysConfig sc on ti.scid=sc.scid
+    where ti.tstid=#{tstid} and ti.enable='y'
+    order by ti.info
+  </select>
+
+  <select id="queryAll" parameterType="TbTeachInfo" resultType="TbTeachInfo">
+    select ti.tiid,ti.tstid,ti.scid,ti.link,ti.info,ti.enable,ti.lastupdate,sc.infoValue 'linktype.infoValue',tst.subtypeName 'subtype.subtypeName',tt.typeName 'subtype.type.typeName'
+    from TbTeachInfo ti
+    inner join TbSysConfig sc on ti.scid=sc.scid
+    inner join TbTeachSubtype tst on ti.tstid=tst.tstid
+    inner join TbTeachType tt on
+    tst.ttid=tt.ttid
+    order by ti.lastupdate desc
+  </select>
+
+  <select id="queryAll_COUNT" parameterType="TbTeachInfo" resultType="int">
+    select count(*) from TbTeachInfo
+  </select>
+
+  <select id="queryByKey" parameterType="TbTeachInfo" resultType="TbTeachInfo">
+    select tiid,tstid,scid,link,info,enable,lastupdate from TbTeachInfo
+    where tiid=#{tiid}
+  </select>
+
+  <insert id="add" parameterType="TbTeachInfo">
+    insert into TbTeachInfo(tstid,scid,link,info)
+    values(#{tstid},#{scid},#{link},#{info})
+  </insert>
+
+  <update id="update" parameterType="TbTeachInfo">
+    update TbTeachInfo set tstid=#{tstid},scid=#{scid},link=#{link},info=#{info},enable=#{enable}
+    where tiid=#{tiid}
+  </update>
+
+  <delete id="delete" parameterType="TbTeachInfo">
+    delete from TbTeachInfo
+    where tiid=#{tiid}
+  </delete>
+
+</mapper>

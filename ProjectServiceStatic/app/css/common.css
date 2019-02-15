@@ -1,0 +1,53 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.h100p {
+  height: 100%;
+}
+
+.h100 {
+  min-height: 100vh;
+}
+
+.h50 {
+  min-height: 50vh;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.pd05 {
+  padding: 0.5rem;
+}
+
+.group-pd05 .input-group {
+  padding: 0.5rem;
+}
+
+@keyframes inc-change-leave {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes inc-change-enter {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0px;
+  }
+}

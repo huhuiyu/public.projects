@@ -1,0 +1,66 @@
+<div ng-controller="AdminTeachSubtypeCtrl">
+  <div class="form-inline text-right pd05">
+    <span class="btn btn-danger" ng-click="query();">查询</span>
+    <span class="btn btn-danger" ng-click="showAdd();">添加</span>
+  </div>
+  <div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td>编号</td>
+          <td>所属分类</td>
+          <td>名称</td>
+          <td>图标</td>
+          <td>描述</td>
+          <td>是否启用</td>
+          <td>最后修改时间</td>
+          <td>操作</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="d in list">
+          <td><span ng-bind="d.tstid"></span></td>
+          <td><span ng-bind="showTypeName(d);"></span></td>
+          <td><span ng-bind="d.subtypeName"></span></td>
+          <td>
+            <span class="iconfont" ng-bind-html="d.iconfont"></span>
+            <span ng-bind="d.iconfont"></span>
+          </td>
+          <td><span ng-bind="d.info"></span></td>
+          <td>
+            <span ng-if="d.enable=='y'" class="text-primary">启用中</span>
+            <span ng-if="d.enable=='n'" class="text-danger">已停用</span>
+          </td>
+          <td><span show-time="{{d.lastupdate}}" show-time-format="y-M-d h:m:s" ng-click="showData(d);"></span></td>
+          <td>
+            <span class="btn btn-danger btn-sm" ng-click="showModify(d);">修改</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <nav class="text-center">
+      <ul class="pagination">
+        <li ng-class="{true:'disabled'}[page.pageNumber==1]">
+          <a href="javascript:void(0);" ng-click="toPage(1);">首页</a>
+        </li>
+        <li ng-class="{true:'disabled'}[page.pageNumber==1]">
+          <a href="javascript:void(0);" ng-click="toPage(page.pageNumber-1);">上一页</a>
+        </li>
+        <li class="disabled" onclick="return false;">
+          <a href="javascript:void(0);">
+            {{page.total}}/{{page.pageNumber}}/{{page.pageCount}}
+          </a>
+        </li>
+        <li ng-class="{true:'disabled'}[page.pageNumber==page.pageCount]">
+          <a href="javascript:void(0);" ng-click="toPage(page.pageNumber+1);">下一页</a>
+        </li>
+        <li ng-class="{true:'disabled'}[page.pageNumber==page.pageCount]">
+          <a href="javascript:void(0);" ng-click="toPage(page.pageCount);">尾页</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</div>

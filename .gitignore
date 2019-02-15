@@ -1,0 +1,13 @@
+ProjectServiceStatic/node_modules/
+ProjectServiceStatic/nginx/logs/
+ProjectServiceStatic/nginx/temp/
+ProjectServiceStatic/dist/
+ProjectServiceStatic/browser.js
+ProjectServiceStatic/nginx-path.bat
+ProjectService/.classpath
+ProjectService/.project
+ProjectService/.gradle/
+ProjectService/.settings/
+ProjectService/bin/
+ProjectService/build/
+ProjectService/logs/

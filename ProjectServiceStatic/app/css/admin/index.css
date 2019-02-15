@@ -1,0 +1,14 @@
+.admin-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-index .div-main {
+  width: 40rem;
+  padding: 1rem 1rem 20% 1rem;
+}
+
+.admin-index .input-group {
+  padding-bottom: 1rem;
+}

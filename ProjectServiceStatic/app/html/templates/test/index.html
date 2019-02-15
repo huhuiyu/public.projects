@@ -1,0 +1,14 @@
+<div ng-controller="TestIndexCtrl">
+  <div class="text-center">
+    <span class="btn btn-danger" ng-click="auth();">授权测试</span>
+  </div>
+  <div class="text-center">
+    <span ng-repeat="icon in icons" style="font-size: 3rem;">
+      <span class="iconfont" ng-bind-html="icon"></span>
+      <span ng-bind="icon"></span>
+    </span>
+  </div>
+  <div>
+    <pre ng-bind-html="data"></pre>
+  </div>
+</div>

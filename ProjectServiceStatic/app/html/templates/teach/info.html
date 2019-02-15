@@ -1,0 +1,18 @@
+<div ng-controller="TeachInfoCtrl" class="teach-info h100">
+  <div class="title"><i class="iconfont">&#xeeb6;</i>课程选择<i class="iconfont">&#xeeb6;</i></div>
+  <div class="back" ng-click="toSub();">
+    <span class="iconfont">&#xe683;</span><span>返回</span>
+  </div>
+  <div class="div-main">
+    <div class="items">
+      <div ng-if="!list || list.length==0" class="item" ng-click="toSub();">
+        <div class="text-center">
+          <span class="iconfont">&#xe601;</span><br><span class="iconfont">&#xe625;</span>
+        </div>
+      </div>
+      <div ng-if="list && list.length>0" ng-repeat="d in list" class="item" ng-click="openLink(d);">
+        <div> {{d.info}}</div>
+      </div>
+    </div>
+  </div>
+</div>

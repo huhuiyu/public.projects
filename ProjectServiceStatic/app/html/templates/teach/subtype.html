@@ -1,0 +1,31 @@
+<div ng-controller="TeachSubtypeCtrl" class="teach-subtype h100">
+  <div class="title"><i class="iconfont">&#xeeb6;</i>课程分类选择<i class="iconfont">&#xeeb6;</i></div>
+  <div class="div-main">
+    <div class="icons">
+      <div class="icon" ng-click="toIndex();">
+        <div class="text-center">
+          <span class="iconfont">&#xe683;</span>
+        </div>
+        <div class="text-center">
+          <span>返回</span>
+        </div>
+      </div>
+      <div ng-if="!list || list.length==0" class="icon" ng-click="toIndex();">
+        <div class="text-center">
+          <span class="iconfont">&#xe625;</span>
+        </div>
+        <div class="text-center">
+          <span>黑洞!!!</span>
+        </div>
+      </div>
+      <div ng-if="list && list.length>0" ng-repeat="d in list" class="icon" ng-click="toInfo(d);">
+        <div class="text-center">
+          <span class="iconfont" ng-bind-html="d.iconfont"></span>
+        </div>
+        <div class="text-center">
+          <span ng-bind-html="d.subtypeName" ng-title="d.info"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
