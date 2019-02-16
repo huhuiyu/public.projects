@@ -62,7 +62,7 @@ create table TbSysConfig
 )comment '系统配置信息表';
 
 /* oss访问地址 */
-insert into TbSysConfig(typeCode,infoCode,infoValue) values('oss','oss-url','http://39.108.124.237/myossdataservice/common/getOssObjUrl?tbOssInfo.objectName=');
+insert into TbSysConfig(typeCode,infoCode,infoValue) values('oss','oss-url','http://demo.huhuiyu.top/myossdataservice/common/getOssObjUrl?tbOssInfo.objectName=');
 insert into TbSysConfig(typeCode,infoCode,infoValue) values('teach-info-type','t01','oss链接');
 insert into TbSysConfig(typeCode,infoCode,infoValue) values('teach-info-type','t02','外部链接');
 

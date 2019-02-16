@@ -6,7 +6,7 @@
     services: 'services',
     controllers: 'controllers',
     directives: 'directives',
-    dataservice: 'http://39.108.124.237/projectsdataservice',
+    dataservice: 'http://demo.huhuiyu.top/projectsdataservice',
     debug: true
   };
 
