@@ -48,6 +48,7 @@
   ```
 
   应答：`success字段判断是否成功`  
+
 - 小类查询 url：`/auth/teachsubtype/queryAll`
   参数：`{"page":"参考分页查询对象"}`  
   应答：`datas.list`为小类查询结果数组，`datas.types`为大类查询结果数组
@@ -78,3 +79,33 @@
     ]
   }
   ```
+
+- 小类添加 url：`/auth/teachsubtype/add`
+  参数：
+
+  ```json
+  {
+    "tbTeachSubtype.iconfont": "iconfont的值",
+    "tbTeachSubtype.info": "小类描述",
+    "tbTeachSubtype.sbutypeName": "小类类名称",
+    "tbTeachSubtype.ttid": "所属大类id"
+  }
+  ```
+
+  应答：`success字段判断是否成功`  
+
+- 小类修改 url：`/auth/teachsubtype/update`
+  参数：
+
+  ```json
+  {
+    "tbTeachSubtype.iconfont": "iconfont的值",
+    "tbTeachSubtype.info": "小类描述",
+    "tbTeachSubtype.sbutypeName": "小类类名称",
+    "tbTeachSubtype.ttid": "所属大类id",
+    "tbTeachSubtype.tstid": "小类id",
+    "tbTeachSubtype.enable": "是否启用，只有y/n两种值"
+  }
+  ```
+
+  应答：`success字段判断是否成功`  
