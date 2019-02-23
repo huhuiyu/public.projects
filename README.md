@@ -10,3 +10,4 @@
   应答：`message字段为echo参数值,datas.now为系统当前时间戳`  
   - [用户信息接口](user.md)
   - [后台管理信息接口](admin.md)
+  - [教学网站前端信息接口](teach.md)

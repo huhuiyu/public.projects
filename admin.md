@@ -10,12 +10,12 @@
     "datas.page":"参考分页对象格式",
     "datas.list":[
       {
-          "enable": "是否启用，只有y/n两种值",
-          "iconfont": "iconfont的值",
-          "info": "分类描述",
-          "lastupdate": "最后修改时间戳",
-          "ttid": "分类id",
-          "typeName": "分类名称"
+        "enable": "是否启用，只有y/n两种值",
+        "iconfont": "iconfont的值",
+        "info": "分类描述",
+        "lastupdate": "最后修改时间戳",
+        "ttid": "分类id",
+        "typeName": "分类名称"
       }
     ]
   }
@@ -58,13 +58,13 @@
     "datas.page":"参考分页对象格式",
     "datas.list":[
       {
-          "enable": "是否启用，只有y/n两种值",
-          "iconfont": "iconfont的值",
-          "info": "小类描述",
-          "lastupdate": "最后修改时间戳",
-          "ttid": "所属大类id",
-          "subtypeName": "小类名称",
-          "tstid": "小类id"
+        "enable": "是否启用，只有y/n两种值",
+        "iconfont": "iconfont的值",
+        "info": "小类描述",
+        "lastupdate": "最后修改时间戳",
+        "ttid": "所属大类id",
+        "subtypeName": "小类名称",
+        "tstid": "小类id"
       }
     ],
     "datas.types":[
