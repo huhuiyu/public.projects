@@ -7,8 +7,8 @@
 
   ```json
   {
-    "datas.page":"参考分页对象格式",
-    "datas.list":[
+    "datas.page": "参考分页对象格式",
+    "datas.list": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -32,14 +32,14 @@
   }
   ```
 
-  应答：`success字段判断是否成功`  
+  应答：`success字段判断是否成功`
 
 - 教学分类修改 url `/auth/teachtype/update`
   参数：
 
   ```json
   {
-    "tbTeachType.ttid":"分类id",
+    "tbTeachType.ttid": "分类id",
     "tbTeachType.iconfont": "iconfont的值",
     "tbTeachType.info": "分类描述",
     "tbTeachType.typeName": "分类名称",
@@ -47,7 +47,7 @@
   }
   ```
 
-  应答：`success字段判断是否成功`  
+  应答：`success字段判断是否成功`
 
 - 教学小类查询 url：`/auth/teachsubtype/queryAll`
   参数：`{"page":"参考分页查询对象"}`  
@@ -55,8 +55,8 @@
 
   ```json
   {
-    "datas.page":"参考分页对象格式",
-    "datas.list":[
+    "datas.page": "参考分页对象格式",
+    "datas.list": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -67,7 +67,7 @@
         "tstid": "小类id"
       }
     ],
-    "datas.types":[
+    "datas.types": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -87,12 +87,12 @@
   {
     "tbTeachSubtype.iconfont": "iconfont的值",
     "tbTeachSubtype.info": "小类描述",
-    "tbTeachSubtype.sbutypeName": "小类类名称",
+    "tbTeachSubtype.subtypeName": "小类类名称",
     "tbTeachSubtype.ttid": "所属大类id"
   }
   ```
 
-  应答：`success字段判断是否成功`  
+  应答：`success字段判断是否成功`
 
 - 教学小类修改 url：`/auth/teachsubtype/update`
   参数：
@@ -108,7 +108,7 @@
   }
   ```
 
-  应答：`success字段判断是否成功`  
+  应答：`success字段判断是否成功`
 
 - 教学信息查询 url：`/auth/teachinfo/queryAll`
   参数：`{"page":"参考分页查询对象"}`  
@@ -116,8 +116,8 @@
 
   ```json
   {
-    "datas.page":"参考分页对象格式",
-    "datas.list":[
+    "datas.page": "参考分页对象格式",
+    "datas.list": [
       {
         "enable": "是否启用，只有y/n两种值",
         "info": "信息描述",
@@ -126,7 +126,7 @@
         "tstid": "所属小类",
         "scid": "链接类型id",
         "link": "链接地址",
-        "linktype" : {
+        "linktype": {
           "infoValue": "链接类型"
         },
         "subtype": {
@@ -146,7 +146,7 @@
 
   ```json
   {
-    "datas.types":[
+    "datas.types": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -156,7 +156,7 @@
         "typeName": "分类名称"
       }
     ],
-    "datas.infotypes":[
+    "datas.infotypes": [
       {
         "infoCode": "系统信息代码",
         "infoValue": "系统信息值",
@@ -180,7 +180,7 @@
   }
   ```
 
-  应答：`success字段判断是否成功`  
+  应答：`success字段判断是否成功`
 
 - 教学信息修改表单关联信息查询 url：`/auth/teachinfo/queryAddBaseInfo`
   参数：`{"tbTeachInfo.tstid":"所属小类id"}`  
@@ -188,7 +188,7 @@
 
   ```json
   {
-    "datas.types":[
+    "datas.types": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -198,7 +198,7 @@
         "typeName": "分类名称"
       }
     ],
-    "datas.subtypes":[
+    "datas.subtypes": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -208,7 +208,7 @@
         "typeName": "分类名称"
       }
     ],
-    "datas.infotypes":[
+    "datas.infotypes": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -236,4 +236,4 @@
   }
   ```
 
-  应答：`success字段判断是否成功`  
+  应答：`success字段判断是否成功`
