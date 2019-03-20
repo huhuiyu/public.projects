@@ -8,7 +8,7 @@
 
   ```json
   {
-    "datas.list":[
+    "datas.list": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -27,7 +27,7 @@
 
   ```json
   {
-    "datas.list":[
+    "datas.list": [
       {
         "enable": "是否启用，只有y/n两种值",
         "iconfont": "iconfont的值",
@@ -41,28 +41,28 @@
   }
   ```
 
-- 信息查询 url：`/teachsubtype/queryBySubtype`
+- 信息查询 url：`/teachinfo/queryBySubtype`
   参数：`{"tbTeachInfo.tstid":"小类id"}`
   应答：`datas.list`为信息查询结果数组，`datas.config`为配置信息
 
   ```json
   {
-    "datas.list":[
+    "datas.list": [
       {
         "enable": "是否启用，只有y/n两种值",
         "info": "信息描述",
         "lastupdate": "最后修改时间戳",
         "link": "链接",
         "linktype": {
-            "infoCode": "链接类型code",
-            "infoValue": "链接类型"
+          "infoCode": "链接类型code",
+          "infoValue": "链接类型"
         },
         "scid": "系统信息id",
         "tiid": "信息id",
         "tstid": "小类id"
       }
     ],
-    "datasconfig": {
+    "datas.config": {
       "infoCode": "链接类型code",
       "infoValue": "链接地址",
       "lastupdate": "最后修改时间戳",
