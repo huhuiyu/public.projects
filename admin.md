@@ -182,7 +182,7 @@
 
   应答：`success字段判断是否成功`
 
-- 教学信息修改表单关联信息查询 url：`/auth/teachinfo/queryAddBaseInfo`
+- 教学信息修改表单关联信息查询 url：`/auth/teachinfo/queryModifyBaseInfo`
   参数：`{"tbTeachInfo.tstid":"所属小类id"}`  
   应答：`datas.types`为大类信息，`datas.subtypes`为小类信息，`datas.infotypes`为链接类型链接类型
 
